@@ -1,0 +1,28 @@
+#Autosave Files
+*~
+
+# Build/Test Output
+obj
+bin
+test-results
+
+# Upgrade Reports
+_UpgradeReport_Files
+UpgradeLog.*
+
+# User Data
+*.DS_Store
+*.sln.cache
+*.suo
+*.userprefs
+*.usertasks
+*.user
+
+# ReSharper
+*_Resharper.*
+*.Resharper
+
+# dotCover
+*.dotCover
+
+
