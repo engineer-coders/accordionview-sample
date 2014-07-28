@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccordionView_Sample", "AccordionView_Sample\AccordionView_Sample.csproj", "{F726F40B-0810-42D5-8C36-F082B7BC4A16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Release|iPhone.Build.0 = Release|iPhone
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F726F40B-0810-42D5-8C36-F082B7BC4A16}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AccordionView_Sample\AccordionView_Sample.csproj
+	EndGlobalSection
+EndGlobal
