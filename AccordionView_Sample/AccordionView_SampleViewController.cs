@@ -4,11 +4,13 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
+using System.Collections.Generic;
+
 namespace AccordionView_Sample
 {
 	public partial class AccordionView_SampleViewController : UIViewController
 	{
-		public AccordionView_SampleViewController (IntPtr handle) : base (handle)
+		public AccordionView_SampleViewController () : base ("AccordionView_SampleViewController", null)
 		{
 		}
 
@@ -16,40 +18,57 @@ namespace AccordionView_Sample
 		{
 			// Releases the view if it doesn't have a superview.
 			base.DidReceiveMemoryWarning ();
-			
+
 			// Release any cached data, images, etc that aren't in use.
 		}
-
-		#region View lifecycle
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
-		public override void ViewWillAppear (bool animated)
+		public override void ViewDidUnload ()
 		{
-			base.ViewWillAppear (animated);
+			base.ViewDidUnload ();
+
+			/*
+			 * Clear any references to subviews of the main view in order to
+			 * allow the Garbage Collector to collect them sooner.
+ 			 *
+			 * e.g. myOutlet.Dispose (); myOutlet = null;
+			 */
+
+			ReleaseDesignerOutlets ();
 		}
 
-		public override void ViewDidAppear (bool animated)
+		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
-			base.ViewDidAppear (animated);
+			// Return true for supported orientations.
+			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
 
-		public override void ViewWillDisappear (bool animated)
+		private void ShowDemo(AccordionView.Mode mode)
 		{
-			base.ViewWillDisappear (animated);
+			var vc = new DemoAccordionViewController(mode);
+			this.NavigationController.PushViewController(vc, true);
 		}
 
-		public override void ViewDidDisappear (bool animated)
+		partial void DoMultiOpen (MonoTouch.Foundation.NSObject sender)
 		{
-			base.ViewDidDisappear (animated);
+			ShowDemo(AccordionView.Mode.MultipleSelection);
 		}
 
-		#endregion
+		partial void DoSingleOpen (MonoTouch.Foundation.NSObject sender)
+		{
+			ShowDemo(AccordionView.Mode.SingleSelection);
+		}
+
+		partial void DoSingleOpenPlus (MonoTouch.Foundation.NSObject sender)
+		{
+			ShowDemo(AccordionView.Mode.SingleSelection_OneAlwaysOpen);
+		}
 	}
 }
 
